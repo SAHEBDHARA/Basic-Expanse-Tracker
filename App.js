@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function createListItem(data) {
+
         const li = document.createElement('li');
         li.classList.add('list-group-item');
         li.textContent = `Expenses: ${data.expanseAmount}, Desc: ${data.descriptioin}, Category: ${data.catagory}`;
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('expanseAmount').value = data.expanseAmount;
             document.getElementById('descriptioin').value = data.descriptioin;
             document.getElementById('Catagory').value = data.catagory;
+            userList.removeChild(li);
         });
 
         li.appendChild(deleteButton);
